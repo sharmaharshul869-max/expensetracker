@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>💰 Expense Tracker</h1>
+    <p>Manage your daily income and expenses easily.</p>
+</header>
+
+<div class="container">
+
+    <div class="status-card">
+        <h3>🚀 Backend Status</h3>
+        <p>Backend is Running Successfully</p>
+    </div>
+
+    <div class="dashboard">
+
+        <div class="card">
+            <h3>Total Balance</h3>
+            <h2 id="balance">₹0</h2>
+        </div>
+
+        <div class="card income-card">
+            <h3>Total Income</h3>
+            <h2 id="income">₹0</h2>
+        </div>
+
+        <div class="card expense-card">
+            <h3>Total Expense</h3>
+            <h2 id="expense">₹0</h2>
+        </div>
+
+    </div>
+
+    <div class="form-box">
+
+        <h2>💰 Add Expense Transaction</h2>
+
+        <form id="expenseForm">
+
+            <input type="text" id="title" placeholder="Transaction Title" required>
+
+            <input type="number" id="amount" placeholder="Amount" required>
+
+            <select id="type">
+                <option value="Income">Income</option>
+                <option value="Expense">Expense</option>
+            </select>
+
+            <select id="category">
+                <option>Salary</option>
+                <option>Food</option>
+                <option>Travel</option>
+                <option>Shopping</option>
+                <option>Bills</option>
+                <option>Entertainment</option>
+                <option>Other</option>
+            </select>
+
+            <input type="date" id="date" required>
+
+            <textarea id="note" placeholder="Write Note..."></textarea>
+
+            <button type="submit">Add Transaction</button>
+
+        </form>
+
+    </div>
+
+    <div class="table-box">
+
+        <h2>💳 Recent Transactions</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Title</th>
+                    <th>Amount</th>
+                    <th>Type</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="transactionBody">
+
+                <tr>
+                    <td colspan="4">📭 No Transactions Found</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
